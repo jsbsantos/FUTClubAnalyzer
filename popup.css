@@ -1,0 +1,50 @@
+body {
+    background-color: beige;
+}
+
+.league {
+    margin: 5px ;
+    padding: 5px; 
+    text-align: center;
+    background-color: lightblue;
+}
+
+.league h3 {
+    text-align: center;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+td {
+    text-align: center
+}
+
+tbody > tr:last-child {
+    font-weight: bold;
+    border-top: 1px solid black;
+}
+
+.highlight-8,
+.highlight-9,
+.highlight-10,
+.highlight-11 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: yellow;
+}
+
+.highlight-12,
+.highlight-13,
+.highlight-14,
+.highlight-15,
+.highlight-16,
+.highlight-17,
+.highlight-18,
+.highlight-19 {
+    font-weight: bold;
+    color: orangered;
+    font-size: 1.5em;
+}
