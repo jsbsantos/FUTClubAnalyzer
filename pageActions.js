@@ -3,7 +3,7 @@
 if (window.PageActions) {
     delete window.PageActions;
 }
-var maxRetries = 5;
+const maxRetries = 5;
 
 window.PageActions = {
     'My Club Players': function (retries) {
@@ -12,8 +12,8 @@ window.PageActions = {
             setTimeout(PageActions['My Club Players'].bind(null, retries +1), 250);
         }
         else if (players.length > 0) {
-            var playerData = [];
-            for (var idx = 0; idx < players.length; idx++) {
+            const playerData = [];
+            for (let idx = 0; idx < players.length; idx++) {
                 const playerElement = players[idx];
                 const playerCardElements = playerElement.getElementsByClassName("ut-item-view--bio ut-item-view");
 
@@ -32,7 +32,7 @@ window.PageActions = {
                     const messageData = {
                         name: name,
                         rating: playerRating,
-                        playerPosition: playerPosition,
+                        position: playerPosition,
                         isRare: isRare,
                         quality: playerRating < 65 ? 0 : (playerRating < 75 ? 1 : 2),
                         isSpecial: isSpecial,
@@ -44,6 +44,7 @@ window.PageActions = {
                     playerData.push(messageData);
                 }
             }
+            
             chrome.runtime.sendMessage({ type: 'clubPlayer.add', data: playerData });
         }
     }

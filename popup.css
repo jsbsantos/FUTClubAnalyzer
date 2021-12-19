@@ -1,12 +1,24 @@
+.tabs { list-style: none; padding: 0; }
+.tabs li { display: inline; }
+.tabs li span { color: black; float: left; display: block; padding: 4px 10px; margin-left: -1px; position: relative; left: 1px; background: white; text-decoration: none; }
+.tabs li.active span { background-color: lightblue; }
+.tabs li span:hover { background: #ccc; }
+.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+.box-wrap { position: relative; min-height: 250px; }
+.tabbed-area div div { background: lightblue; padding: 10px; width: 100%; }
+.tabs li span { border: 1px solid #ccc; }
+.hide { display: none; }
+
 body {
     background-color: beige;
+    width: 300px;
+    margin-right: 25px;
 }
 
 .league {
-    margin: 5px ;
-    padding: 5px; 
-    text-align: center;
-    background-color: lightblue;
+    text-align: center !important;
+    padding: 0 !important;
 }
 
 .league h3 {

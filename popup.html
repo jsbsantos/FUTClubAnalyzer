@@ -3,20 +3,16 @@
 
 <head>
   <link rel="stylesheet" href="popup.css">
+  <script src="FUTBasicAnalyzer.js"></script>
+  <script src="FUTPositionsAnalyzer.js"></script>
+  <script src="FUTAnalyzer.js"></script>
 </head>
 
 <body>
-  <div id="header"><button type="button" id="resetDB">Reset</button></div>
+  <div id="header"><button style="float:right" type="button" id="resetDB">Reset</button></div>
   <div class="tabbed-area">
-    <ul class="tabs group">
-      <li><a href="javascript:changeTab('box-leagueContent')">League Details</a></li>
-      <li><a href="javascript:changeTab('box-leagueContentByPostion')">Player by Position</a></li>
-    </ul>
-    <div class="box-wrap">
-      <div id="box-leagueContent"></div>
-      <div id="box-leagueContentByPostion"></div>
-    </div>
-
+    <ul id="tabNav" class="tabs group"></ul>
+    <div id="tabContainer" class="box-wrap"></div>
     <script src="popup.js"></script>
 </body>
 
