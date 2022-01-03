@@ -3,11 +3,11 @@
 if (window.PageActions) {
     delete window.PageActions;
 }
-const maxRetries = 5;
+const maxRetries = 10;
 
 window.PageActions = {
     'My Club Players': function (retries) {
-        const players = document.getElementsByClassName("small player item ut-item-loaded");
+        const players = document.getElementsByClassName("small player item");
         if (players.length < 20 && retries < maxRetries) {
             setTimeout(PageActions['My Club Players'].bind(null, retries +1), 250);
         }
